@@ -1,0 +1,40 @@
+section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+button[type="submit"] {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.desc-img,
+.img-fluid {
+    height: 350px;
+}
+
+#team img {
+    max-width: 200px;
+    height: 200px;
+}
+
+#newsletter {
+    background-image: url("../img/slider-1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.desc-img {
+    padding-top: 80px;
+}
+
+.img-showcase {
+    background-position: center;
+    background-size: cover;
+}
+
+@media all and (max-width: 768px) {
+    button[type="submit"] {
+        width: 100%;
+    }
+}
