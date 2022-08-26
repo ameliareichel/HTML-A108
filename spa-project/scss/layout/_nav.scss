@@ -1,0 +1,44 @@
+.main-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1000;
+
+    .logo-link {
+        height: 60px;
+        display: inline-block;
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .nav-content-container {
+        @include flexbox;
+        justify-content: space-between;
+        padding-top: 15px;
+
+        .hamburger {
+
+            .fas.fa-bars {
+                color: $color-primary;
+                position: fixed;
+                top: 0;
+                right: 0;
+            }
+
+        }
+
+        .hamburger-opened {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: $extra-small-size;
+            background-color: $color-primary;
+            text-align: right;
+        }
+    }
+
+}
