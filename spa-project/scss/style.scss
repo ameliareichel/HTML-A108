@@ -18,5 +18,13 @@ font-family: 'Roboto', sans-serif; */
 
 /* Layout: */
 
-/* nav: */
 @import 'layout/nav';
+@import 'layout/header';
+@import 'layout/about';
+@import 'layout/services';
+
+
+/* Components: */
+
+@import 'components/buttons';
+@import 'components/links';

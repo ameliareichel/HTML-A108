@@ -1,12 +1,11 @@
-let hamburger = document.querySelector('.hamburger');
-let closeNav = document.querySelector('.fa-times');
+let navBars = document.querySelector('.fa-bars');
+let navX = document.querySelector('.fa-times');
+let openNav = document.querySelector('.hamburger-opened');
 
-hamburger.addEventListener('click', function() {
-    let hamburgerOpened = document.querySelector('.hamburger-opened');
-    hamburgerOpened.style.display = 'block';
+navBars.addEventListener('click', function() {
+    openNav.style.display = 'block';
 })
 
-closeNav.addEventListener('click', function() {
-    let hamburgerOpened = document.querySelector('.hamburger-opened');
-    hamburgerOpened.style.display = 'none';
+navX.addEventListener('click', function() {
+    openNav.style.display = 'none';
 })

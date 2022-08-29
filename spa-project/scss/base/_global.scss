@@ -7,6 +7,23 @@ body {
     color: $text-color-primary;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-secondary;
+    font-size: $font-size-secondary;
+    color: $color-secondary;
+}
+
+p,
+a,
+input {
+    font-size: $font-size-primary;
+}
+
 .container {
     max-width: $small-container-size;
     width: $small-container-size;

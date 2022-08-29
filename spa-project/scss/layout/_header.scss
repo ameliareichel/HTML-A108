@@ -1,0 +1,116 @@
+#home {
+    @include flexbox;
+    position: relative;
+    height: 700px;
+    justify-content: flex-start;
+    align-items: center;
+    background-image: url('../img/header-flowers.png');
+    background-position: left 240px;
+    background-repeat: no-repeat;
+    background-size: 8%;
+
+    img {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        max-width: 30%;
+        z-index: 1500;
+    }
+
+    .home-container {
+        padding-left: 7%;
+        max-width: 100%;
+        width: 100%;
+        margin-bottom: 40px;
+        
+
+        .first-paragraph,
+        h1 {
+            font-family: $font-secondary;
+        }
+
+        p {
+            font-size: $font-size-primary;
+            margin-bottom: 45px;
+        }
+
+        .first-paragraph {
+            color: $color-secondary;
+            text-transform: uppercase;
+            font-weight: 600;
+            letter-spacing: 1px;
+            margin: 20px 0;
+        }
+
+        .second-paragraph {
+            color: #555;
+            line-height: 22px;
+        }
+
+        h1 {
+            font-size: 50px;
+            color: #1e2528;
+            margin-top: 5px;
+        }
+
+        a {
+            text-decoration: none;
+            padding: 12px 1 0px;
+            display: inline-block;
+
+
+            &.reserve {
+                border: none;
+                background-color: $color-primary;
+                color: #fff;
+                padding: 15px 20px;
+                margin-right: 10px;
+            }
+
+            &.reserve:hover {
+                background-color: $color-accent;
+                transition-duration: 0.3s;
+            }
+
+        }
+
+    }
+
+}
+
+@media all and (min-width: $extra-large-size) {
+    #home {
+
+
+        img {
+            max-width: 40%;
+            display: block;
+        }
+
+        .container-header {
+            width: 55%;
+        }
+    }
+}
+
+@media all and (min-width: $large-size) {
+
+    #home {
+
+
+        img {
+            display: block;
+        }
+    }
+
+
+    .home-container {
+
+
+        .container-header {
+            width: 60%;
+        }
+
+    }
+}

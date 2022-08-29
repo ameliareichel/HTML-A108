@@ -1,0 +1,40 @@
+#about {
+    text-align: center;
+
+    .about-section {
+        margin: auto;
+        margin-bottom: 100px;
+        padding: 20px;
+
+        .logo {
+            height: 75px;
+        }
+
+        p {
+            width: 100%;
+            margin-bottom: 40px;
+            font-weight: 100;
+            line-height: 23px;
+
+            &.about-paragraph {
+                text-transform: uppercase;
+                color: $color-secondary;
+                letter-spacing: 2px;
+                font-weight: 500;
+            }
+        }
+    
+    }
+}
+
+@media all and (min-width: $extra-large-size) {
+    .about-section {
+        width: 100%;
+    }
+}
+
+@media all and (min-width: $large-size) {
+    .about-section {
+        width: 75%;
+    }
+}

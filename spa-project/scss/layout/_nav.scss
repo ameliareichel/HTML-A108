@@ -8,6 +8,7 @@
     .logo-link {
         height: 60px;
         display: inline-block;
+        padding: 15px 0;
 
         img {
             height: 100%;
@@ -17,15 +18,27 @@
     .nav-content-container {
         @include flexbox;
         justify-content: space-between;
-        padding-top: 15px;
+
+
+        %icons {
+            position: fixed;
+            top: 0;
+            right: 0;
+            font-size: 26px;
+            padding: 15px 25px;
+            cursor: pointer;
+        }
 
         .hamburger {
 
             .fas.fa-bars {
+                @extend %icons;
                 color: $color-primary;
-                position: fixed;
-                top: 0;
-                right: 0;
+            }
+
+            .fas.fa-times {
+                @extend %icons;
+                color: #fff;
             }
 
         }
@@ -35,10 +48,82 @@
             position: fixed;
             top: 0;
             right: 0;
-            width: $extra-small-size;
+            max-width: $extra-small-size;
             background-color: $color-primary;
             text-align: right;
+            padding: 15px 25px;
+
+            .nav-list {
+                margin-top: 38px;
+                list-style: none;
+
+                .nav-item {
+
+                    line-height: 30px;
+
+                    a {
+                        text-decoration: none;
+                        color: #fff;
+                        font-family: $font-primary;
+                    }
+                }
+
+            }
+
         }
     }
 
+}
+
+@media all and (min-width: $large-size) {
+    .main-navbar {
+
+        .logo-link {
+            height: 100px;
+        }
+
+        .hamburger {
+
+
+            .hamburger-opened {
+                @include flexbox;
+                height: 60px;
+                position: fixed;
+                left: 15%;
+                margin-top: 0;
+                padding-top: 0;
+                background-color: transparent;
+                max-width: fit-content;
+
+                .nav-list {
+                    margin: 50px 0;
+                    text-align: center;
+                    padding: 0;
+
+                    .nav-item {
+                        display: inline;
+                        justify-content: space-evenly;
+                        padding: 0 20px;
+        
+
+                        a {
+                            color: $color-secondary;
+                            text-transform: uppercase;
+                            font-size: $menu-footer-font-size;
+                            font-weight: 600;
+                        }
+
+                    }
+
+                }
+            }
+
+            .fas.fa-times,
+            .fas.fa-bars {
+                display: none;
+            }
+
+        }
+
+    }
 }
