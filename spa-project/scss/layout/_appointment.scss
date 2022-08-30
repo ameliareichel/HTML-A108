@@ -1,0 +1,94 @@
+#appointment {
+    background-color: $color-primary;
+    margin-bottom: 100px;
+
+    .appointment-form {
+        width: 100%;
+        padding: 60px 40px;
+        padding-bottom: 30px;
+
+
+        input {
+            width: 100%;
+            text-transform: uppercase;
+            padding: 15px;
+
+            &::placeholder {
+                @include placeholders;
+            }
+
+        }
+
+        select {
+            width: 100%;
+            text-transform: uppercase;
+            padding: 15px;
+
+            &::placeholder {
+                @include placeholders;
+            }
+        }
+
+        textarea {
+            width: 100%;
+            text-transform: uppercase;
+            padding: 15px;
+            padding-bottom: 40px;
+
+            &::placeholder {
+                @include placeholders;
+            }
+        }
+
+        .input-button {
+            width: 50%;
+            margin-top: 18px;
+        }
+    }
+}
+
+@media all and (max-width: $extra-small-size) {
+    #appointment {
+
+        .appointment-form {
+
+            .input-button {
+                width: 175px;
+            }
+        }
+    }
+}
+
+@media all and (min-width: $large-size) {
+    #appointment {
+        @include flexbox;
+
+        .appointment-image {
+            width: 40%;
+            background-image: url('../img/contact-bg.jpg');
+            background-position: center;
+        }
+
+        .appointment-form {
+            @include flexbox;
+            width: 60%;
+            justify-content: space-between;
+            padding: 80px;
+
+            input, select {
+                width: 49%;
+            
+            }
+
+            textarea {
+                margin-top: 50px;
+            }
+
+            .input-button {
+                width: 300px;
+                margin-top: 50px;
+            }
+            
+        }
+    }
+}

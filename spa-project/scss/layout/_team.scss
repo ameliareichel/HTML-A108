@@ -1,0 +1,250 @@
+#team {
+    margin-bottom: 220px;
+
+    .team-container {
+
+        .team-header {
+            text-align: center;
+            max-width: 90%;
+            margin: auto;
+            margin-bottom: 50px;
+
+            p {
+                @include paragraphs;
+            }
+        }
+
+        .team-row {
+            @include flexbox;
+            justify-content: center;
+            max-width: 100%;
+            margin-bottom: 100px;
+
+            .team-image {
+                position: relative;
+                width: 90%;
+                margin-top: 60px;
+
+                img {
+                    width: 100%;
+                }
+
+                .team-slide {
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    background-color: #fff;
+                    bottom: -50px;
+                    margin: auto;
+                    text-align: center;
+                    width: 80%;
+                    transition: all 0.3s;
+
+                    .team-social-wrapper {
+                        height: 0;
+                        overflow: hidden;
+                        transition: all 0.3s;
+
+                        .social-icons {
+                            font-size: 30px;
+                            margin: 0 15px;
+                            color: #473452;
+                            transition: all 0.3s;
+
+                            &:hover {
+                                color: $color-primary;
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        padding-bottom: 30px;
+                        box-shadow: 0 5px 20px #f0f0f0;
+                    }
+
+                    &:hover .team-social-wrapper {
+                        height: 40px;
+                    }
+
+                    h4 {
+                        font-size: $font-size-primary + 6;
+                    }
+
+                }
+
+            }
+        }
+    }
+}
+
+@media all and (min-width: $medium-size) {
+    #team {
+
+        .team-container {
+
+            .team-header {
+                text-align: center;
+                max-width: 90%;
+                margin: auto;
+                margin-bottom: 50px;
+
+                p {
+                    @include paragraphs;
+                }
+            }
+
+            .team-row {
+                @include flexbox;
+                justify-content: center;
+                max-width: 100%;
+                margin-bottom: 100px;
+
+                .team-image {
+                    position: relative;
+                    width: 30%;
+                    padding: 10px 0;
+                    margin: 10px 0;
+
+                    img {
+                        width: 100%;
+                        border: 12px solid #fff;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* @media all and (max-width: $small-size) {
+    #team {
+
+        .team-container {
+
+            .team-row {
+
+                .team-image {
+
+
+                    .team-slide {
+
+
+                        h4,
+                        p {
+                            width: 100%;
+                        }
+
+                        .team-social-wrapper {
+                            height: 40px;
+                            overflow: hidden;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 460px) {
+    #team {
+
+        .team-container {
+
+            .team-row {
+
+                .team-image {
+                    margin: 0;
+
+                    .team-slide {
+
+                        .team-social-wrapper {
+                            height: 20px;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media all and (min-width: $medium-size) {
+    #team {
+
+        .team-container {
+            margin: 20px 40px;
+            padding: 15px;
+
+            .team-header {
+                max-width: 60%;
+            }
+
+            .team-row {
+                @include flexbox;
+                justify-content: center;
+                max-width: 100%;
+                margin-bottom: 100px;
+
+                .team-image {
+                    margin: 0;
+                    width: 33%;
+
+                    .team-slide {
+
+                        .team-social-wrapper {
+                            height: 20px;
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+} */

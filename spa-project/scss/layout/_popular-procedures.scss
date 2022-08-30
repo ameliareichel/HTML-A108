@@ -1,0 +1,142 @@
+.popular-procedures {
+    margin-bottom: 70px;
+
+    .procedures-container {
+
+        .procedures-header {
+            text-align: center;
+            max-width: $small-container-size;
+            padding: 0 20px;
+
+
+            p {
+                @include paragraphs;
+            }
+
+        }
+
+        .procedures-row {
+            @include flexbox;
+            justify-content: center;
+            width: 100%;
+            margin: 10px auto;
+            padding: 10px 35px;
+
+            .procedure {
+                text-align: center;
+                width: 100%;
+
+
+                .procedure-inner {
+                    border: 1px solid #e2e5ea;
+                    padding: 20px 15px;
+                    margin: 15px 0;
+                    padding-bottom: 36px;
+
+                    &:hover {
+                        box-shadow: 0 5px 20px #f0f0f0;
+                    }
+
+                    img {
+                        width: 98%;
+                        margin: auto;
+                    }
+
+                    h4 {
+                        font-size: $font-size-primary + 6;
+                    }
+
+                    p {
+                        @include paragraphs;
+                        margin: 0 auto;
+                        margin-bottom: 40px;
+                        max-width: 95%;
+
+                    }
+
+                    a {
+                        background-color: $color-accent;
+
+                        &:hover {
+                            background-color: $color-primary;
+                            transition-duration: 0.3s;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media all and (min-width: $medium-size) {
+    .popular-procedures {
+        margin-bottom: 70px;
+
+        .procedures-container {
+            margin: 50px 20px;
+            padding: 30px;
+
+            .procedures-header {
+                text-align: center;
+                max-width: 70%;
+                margin: auto;
+
+                p {
+                    @include paragraphs;
+                    margin-bottom: 50px;
+                }
+
+            }
+
+            .procedures-row {
+                @include flexbox;
+                justify-content: center;
+                width: 100%;
+                margin: 10px auto;
+                padding: 10px 30px;
+
+                .procedure {
+                    text-align: center;
+                    width: 33%;
+                    padding: 0 10px;
+
+                    .procedure-inner {
+                        border: 1px solid #e2e5ea;
+                        padding: 20px 15px;
+                        margin: 15px 0;
+                        padding-bottom: 36px;
+
+                        &:hover {
+                            box-shadow: 0 5px 20px #f0f0f0;
+                        }
+
+                        img {
+                            width: 95%;
+                            margin: auto;
+                        }
+
+                        h4 {
+                            font-size: $font-size-primary + 6;
+                        }
+
+                        p {
+                            @include paragraphs;
+                            margin-bottom: 40px;
+                        }
+
+                        a {
+                            background-color: $color-accent;
+
+                            &:hover {
+                                background-color: $color-primary;
+                                transition-duration: 0.3s;
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}

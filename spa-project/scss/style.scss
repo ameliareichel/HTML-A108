@@ -22,9 +22,14 @@ font-family: 'Roboto', sans-serif; */
 @import 'layout/header';
 @import 'layout/about';
 @import 'layout/services';
+@import 'layout/popular-procedures';
+@import 'layout/team';
+@import 'layout/appointment';
+@import 'layout/blog';
 
 
 /* Components: */
 
 @import 'components/buttons';
 @import 'components/links';
+@import 'components/inputs';

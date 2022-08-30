@@ -1,130 +1,76 @@
-#services {
-    max-width: 100%;
+.row {
     margin: 70px 0;
+    height: 340px;
+    display: flex;
 
-    .row {
-        @include flexbox;
-        width: 100%;
+    .service-link {
+        flex-basis: 25%;
+        position: relative;
 
-        a {
+        .img-service {
+            height: 100%;
             width: 100%;
-            height: 340px;
-
-            img {
-                width: 100%;
-                height: 340px;
-                object-fit: cover;
-
-            }
+            object-fit: cover;
         }
 
-    }
+        .service-cover {
+            position: absolute;
+            background-color: rgba(27, 164, 206, 0.6);
+            top: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            opacity: 0;
 
-}
-
-@media all and (min-width: $medium-size) {
-    #services {
-        max-width: 100%;
-
-        .row {
-
-
-            a {
-                position: relative;
-                width: 50%;
-                height: 340px;
-
-                img {
-                    width: 100%;
-                    height: 340px;
-                    object-fit: cover;
-                }
-
-                .service-cover {
-                    // text-align: center;
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    right: 50%;
-                    transform: translate(-50%, -50%);
-                    width: 50%;
-                    height: 50%;
-                    display: flex;
-                    align-items: center;
-                    // justify-content: center;
-                    flex-direction: column;
-                    
-
-                    .image-icon {
-                        /* position: absolute;
-                        top: 35%;
-                        left: 40%; */
-
-                        height: 50px;
-                        width: 70px;
-                    }
-
-                    h3 {
-                        color: #fff;
-                        font-size: $font-size-primary + 6;
-                        position: absolute;
-                        top: 40%;
-                        left: 50%;
-                    }
-
-                }
-
+            &:hover {
+                opacity: 1;
             }
 
-        }
+            .image-icon {
+                width: 80px;
+                height: auto;
+            }
 
+            h3 {
+                color: #fff;
+                font-size: 22px;
+            }
+        }
     }
 }
 
-@media all and (min-width: $large-size) {
-    #services {
-        max-width: 100%;
+@media all and (max-width: $large-size) {
+    .row {
+        flex-wrap: wrap;
+        height: 650px;
 
-        .row {
-            position: relative;
+        .service-link {
+            height: 50%;
+            flex-basis: 50%;
 
-            a {
-                width: 25%;
-                height: 400px;
-
-                img {
-                    width: 100%;
-                    object-fit: cover;
-                    height: 400px;
-                }
-
-                .service-cover {
-                    text-align: center;
-                    position: absolute;
-                    top: 0;
-                    width: 25%;
-                    height: 100%;
-
-                    .image-icon {
-                        position: absolute;
-                        top: 32%;
-                        left: 40%;
-                        height: 55px;
-                        width: 70px;
-                    }
-
-                    h3 {
-                        color: #fff;
-                        font-size: $font-size-primary + 6;
-                        position: absolute;
-                        top: 46%;
-                        left: 25%;
-                    }
-
-                }
+            .image-icon {
+                width: 30px;
+                height: auto;
             }
 
+            h3 {
+                color: #fff;
+                font-size: 1.5em;
+            }
         }
+    }
+}
 
+@media all and (max-width: $medium-size) {
+    .row {
+        height: 450px;
+
+        .service-link {
+            flex-basis: 100%;
+        }
     }
 }
